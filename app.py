@@ -56,6 +56,7 @@ def handle_message(event):
         buttons_template_message = TemplateSendMessage(
             alt_text='服務功能 template',
             template=ButtonsTemplate(
+                thumbnail_image_url='https://www8.water.gov.tw/ch/images/01_img/image002.png',
                 title='選擇服務',
                 text='請選擇',
                 actions=[
@@ -66,7 +67,7 @@ def handle_message(event):
                     MessageTemplateAction(
                         label='查詢管線狀況',
                         text='查詢管線狀況'
-                    ),
+                    )
                 ]
             )
         )
