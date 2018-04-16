@@ -52,6 +52,28 @@ def handle_message(event):
             event.reply_token,
             TextSendMessage(text='查詢管線狀況功能實作中！')
         )
+    elif event.message.text == '選單':
+        buttons_template_message = TemplateSendMessage(
+            alt_text='服務功能 template',
+            template=ButtonsTemplate(
+                title='選擇服務',
+                text='請選擇',
+                actions=[
+                    MessageTemplateAction(
+                        label='查詢漏水區域',
+                        text='查詢漏水區域'
+                    ),
+                    MessageTemplateAction(
+                        label='查詢管線狀況',
+                        text='查詢管線狀況'
+                    ),
+                ]
+            )
+        )
+        line_bot_api.reply_message(
+            event.reply_token,
+            TextSendMessage(buttons_template_message)
+        )
     else:
         with lock:
             response = chat_bot.ask_question(event.message.text)
@@ -59,26 +81,5 @@ def handle_message(event):
             event.reply_token,
             TextSendMessage(text=response)
         )
-    buttons_template_message = TemplateSendMessage(
-        alt_text='服務功能 template',
-        template=ButtonsTemplate(
-            title='選擇服務',
-            text='請選擇',
-            actions=[
-                MessageTemplateAction(
-                    label='查詢漏水區域',
-                    text='查詢漏水區域'
-                ),
-                MessageTemplateAction(
-                    label='查詢管線狀況',
-                    text='查詢管線狀況'
-                ),
-            ]
-        )
-    )
-    line_bot_api.reply_message(
-        event.reply_token,
-        TextSendMessage(buttons_template_message)
-    )
 if __name__ == "__main__":
     app.run(debug=True)
