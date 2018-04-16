@@ -1,0 +1,84 @@
+import configparser
+import threading
+from chatbot_service import ChatBotService
+from flask import Flask, request, abort
+from linebot.models import TemplateSendMessage
+from linebot.models import ButtonsTemplate
+from linebot.models import MessageTemplateAction
+from linebot import (
+    LineBotApi, WebhookHandler
+)
+from linebot.exceptions import (
+    InvalidSignatureError
+)
+from linebot.models import (
+    MessageEvent, TextMessage, TextSendMessage,
+)
+
+app = Flask(__name__)
+config = configparser.ConfigParser()
+config.read('config.ini')
+
+line_bot_api = LineBotApi(config['line_bot']['Channel_Access_Token'])
+handler = WebhookHandler(config['line_bot']['Channel_Secret'])
+chat_bot = ChatBotService()
+lock = threading.Lock()
+
+@app.route("/callback", methods=['POST'])
+def callback():
+    # get X-Line-Signature header value
+    signature = request.headers['X-Line-Signature']
+    # get request body as text
+    body = request.get_data(as_text=True)
+    app.logger.info("Request body: " + body)
+
+    # handle webhook body
+    try:
+        handler.handle(body, signature)
+    except InvalidSignatureError:
+        abort(400)
+
+    return 'OK'
+
+@handler.add(MessageEvent, message=TextMessage)
+def handle_message(event):
+    if event.message.text == '查詢漏水區域':
+        line_bot_api.reply_message(
+            event.reply_token,
+            TextSendMessage(text='查詢漏水區域功能實作中！')
+        )
+    elif event.message.text == '查詢管線狀況':
+        line_bot_api.reply_message(
+            event.reply_token,
+            TextSendMessage(text='查詢管線狀況功能實作中！')
+        )
+    else:
+        with lock:
+            response = chat_bot.ask_question(event.message.text)
+        line_bot_api.reply_message(
+            event.reply_token,
+            TextSendMessage(text=response)
+        )
+    buttons_template_message = TemplateSendMessage(
+        alt_text='服務功能 template',
+        template=ButtonsTemplate(
+            title='選擇服務',
+            text='請選擇',
+            actions=[
+                MessageTemplateAction(
+                    label='查詢漏水區域',
+                    text='查詢漏水區域'
+                ),
+                MessageTemplateAction(
+                    label='查詢管線狀況',
+                    text='查詢管線狀況'
+                ),
+            ]
+        )
+    )
+    line_bot_api.reply_message(
+        event.reply_token,
+        TextSendMessage(buttons_template_message)
+    )
+if __name__ == "__main__":
+    app.run(debug=True)
