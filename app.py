@@ -73,7 +73,7 @@ def handle_message(event):
         )
         line_bot_api.reply_message(
             event.reply_token,
-            TextSendMessage(buttons_template_message)
+            buttons_template_message
         )
     else:
         with lock:
