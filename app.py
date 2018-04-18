@@ -9,7 +9,7 @@ from linebot import (
     LineBotApi, WebhookHandler
 )
 from linebot.exceptions import (
-    InvalidSignatureError
+    InvalidSignatureError, LineBotApiError
 )
 from linebot.models import (
     MessageEvent, TextMessage, TextSendMessage,
@@ -28,10 +28,14 @@ lock = threading.Lock()
 @app.route("/notify", methods=['GET'])
 def notify():
     app.logger.info("notify body")
-    line_bot_api.push_message(
-        user_id,
-        TextSendMessage(text="通知！")
-    )
+    try:
+        line_bot_api.push_message(
+            user_id,
+            TextSendMessage(text="通知！")
+        )
+    except LineBotApiError:
+        abort(400)
+    return 'OK'
 
 @app.route("/callback", methods=['POST'])
 def callback():
