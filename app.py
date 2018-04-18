@@ -21,8 +21,17 @@ config.read('config.ini')
 
 line_bot_api = LineBotApi(config['line_bot']['Channel_Access_Token'])
 handler = WebhookHandler(config['line_bot']['Channel_Secret'])
+user_id = config['line_bot']['User_Id']
 chat_bot = ChatBotService()
 lock = threading.Lock()
+
+@app.route("/notify", methods=['GET'])
+def notify():
+    app.logger.info("notify body")
+    line_bot_api.push_message(
+        user_id,
+        TextSendMessage(text="通知！")
+    )
 
 @app.route("/callback", methods=['POST'])
 def callback():
