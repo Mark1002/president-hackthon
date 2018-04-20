@@ -1,7 +1,7 @@
 import configparser
 import threading
 from chatbot_service import ChatBotService
-from flask import Flask, request, abort
+from flask import Flask, request, abort, jsonify
 from linebot.models import TemplateSendMessage
 from linebot.models import ButtonsTemplate
 from linebot.models import MessageTemplateAction
@@ -50,7 +50,8 @@ def notify():
         )
     except LineBotApiError:
         abort(400)
-    return 'OK'
+    result_dict = {"status": "ok", "description": "push message success!"}
+    return jsonify(result_dict)
 
 @app.route("/callback", methods=['POST'])
 def callback():
