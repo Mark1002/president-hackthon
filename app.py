@@ -73,13 +73,7 @@ def callback():
 
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
-    entity_list = wit_ai.retrive_message_entity(event.message.text)
-    if 'region' in entity_list:
-        line_bot_api.reply_message(
-            event.reply_token,
-            TextSendMessage(text='好的請說要查的漏水小區')
-        )
-    elif event.message.text == '查詢管線狀況':
+    if event.message.text == '查詢管線狀況':
         line_bot_api.reply_message(
             event.reply_token,
             TextSendMessage(text='查詢管線狀況功能實作中！')
@@ -108,9 +102,11 @@ def handle_message(event):
             buttons_template_message
         )
     else:
-        # with lock:
-        #     response = chat_bot.ask_question(event.message.text)
-        response = '寶寶聽不懂，所以寶寶不說QQ'
+        entity_list = wit_ai.retrive_message_entity(event.message.text)
+        if 'region' in entity_list:
+            response = '好的，請說要查詢的漏水小區'
+        else:
+            response = '寶寶聽不懂，所以寶寶不說QQ'
         line_bot_api.reply_message(
             event.reply_token,
             TextSendMessage(text=response)
