@@ -1,6 +1,7 @@
 import configparser
 import threading
 from chatbot_service import ChatBotService
+from wit_ai import WitAIService
 from flask import Flask, request, abort, jsonify
 from linebot.models import TemplateSendMessage
 from linebot.models import ButtonsTemplate
@@ -23,6 +24,7 @@ line_bot_api = LineBotApi(config['line_bot']['Channel_Access_Token'])
 handler = WebhookHandler(config['line_bot']['Channel_Secret'])
 user_id = config['line_bot']['User_Id']
 # chat_bot = ChatBotService()
+wit_ai = WitAIService()
 lock = threading.Lock()
 
 @app.route("/notify", methods=['POST'])
@@ -71,7 +73,8 @@ def callback():
 
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
-    if event.message.text == '查詢漏水區域':
+    entity_list = wit_ai.retrive_message_entity(event.message.text)
+    if 'region' in entity_list:
         line_bot_api.reply_message(
             event.reply_token,
             TextSendMessage(text='查詢漏水區域功能實作中！')
