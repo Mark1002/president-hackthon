@@ -3,3 +3,4 @@ flask
 gunicorn
 opencc-python-reimplemented
 chatterbot
+wit
