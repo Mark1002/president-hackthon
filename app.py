@@ -77,7 +77,7 @@ def handle_message(event):
     if 'region' in entity_list:
         line_bot_api.reply_message(
             event.reply_token,
-            TextSendMessage(text='查詢漏水區域功能實作中！')
+            TextSendMessage(text='好的請說要查的漏水小區')
         )
     elif event.message.text == '查詢管線狀況':
         line_bot_api.reply_message(
