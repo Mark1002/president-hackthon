@@ -1,0 +1,51 @@
+將軍配水表
+將軍國小
+望安消防局
+Request body: {"events":[{"type":"message","replyToken":"bc4e62e1c18e4c0ca6feeb9a8b5fe390","source":{"userId":"Ufcc6524c6ffd8081bd133843484c63b7","type":"user"},"timestamp":1525486422392,"message":{"type":"text","id":"7905297687823","text":"我要查漏水小區"}}]}
+info
+Request body: {"events":[{"type":"message","replyToken":"d107c0658e5c47d8bab7c39ef96b428b","source":{"userId":"Ufcc6524c6ffd8081bd133843484c63b7","type":"user"},"timestamp":1525486429126,"message":{"type":"text","id":"7905298122306","text":"澎湖"}}]}
+Request body: {"events":[{"type":"message","replyToken":"d134e16babdc46b0b6e2b4ee90bab65a","source":{"userId":"Ufcc6524c6ffd8081bd133843484c63b7","type":"user"},"timestamp":1525486437621,"message":{"type":"text","id":"7905298661009","text":"將軍國小"}}]}
+image url: https://9d8af418.ngrok.io/image/%E6%BE%8E%E6%B9%96/%E5%B0%87%E8%BB%8D%E5%9C%8B%E5%B0%8F/map
+將軍國小
+Request body: {"events":[{"type":"message","replyToken":"db27805ba918465fb236a18dcf1b978a","source":{"userId":"Ufcc6524c6ffd8081bd133843484c63b7","type":"user"},"timestamp":1525499264409,"message":{"type":"text","id":"7906150323234","text":"澎湖"}}]}
+Request body: {"events":[{"type":"message","replyToken":"9a7f564a774949689b7ca87af23a3cc1","source":{"userId":"Ufcc6524c6ffd8081bd133843484c63b7","type":"user"},"timestamp":1525499271276,"message":{"type":"text","id":"7906150778880","text":"將軍國小"}}]}
+image url: https://9d8af418.ngrok.io/image/%E6%BE%8E%E6%B9%96/%E5%B0%87%E8%BB%8D%E5%9C%8B%E5%B0%8F/image002
+將軍國小
+將軍國小
+將軍國小
+將軍國小
+Request body: {"events":[{"type":"message","replyToken":"e8471015ff834dde95f508bc137248da","source":{"userId":"Ufcc6524c6ffd8081bd133843484c63b7","type":"user"},"timestamp":1525499732862,"message":{"type":"text","id":"7906181084123","text":"將軍國小"}}]}
+Request body: {"events":[{"type":"message","replyToken":"d20dcb2afe7d4831b0ed83352d699102","source":{"userId":"Ufcc6524c6ffd8081bd133843484c63b7","type":"user"},"timestamp":1525499753654,"message":{"type":"text","id":"7906182460368","text":"澎湖"}}]}
+Request body: {"events":[{"type":"message","replyToken":"5626631b5ba3407d923286e805bc469b","source":{"userId":"Ufcc6524c6ffd8081bd133843484c63b7","type":"user"},"timestamp":1525499764627,"message":{"type":"text","id":"7906183178217","text":"將軍國小"}}]}
+image url: https://9d8af418.ngrok.io/image/%E6%BE%8E%E6%B9%96/%E5%B0%87%E8%BB%8D%E5%9C%8B%E5%B0%8F/image002
+將軍國小
+Request body: {"events":[{"type":"message","replyToken":"5397f8b280a8455daf5a082b5132e4eb","source":{"userId":"Ufcc6524c6ffd8081bd133843484c63b7","type":"user"},"timestamp":1525499826313,"message":{"type":"text","id":"7906187233233","text":"澎湖"}}]}
+Request body: {"events":[{"type":"message","replyToken":"5ccdb611c4c846b091dda34e3ecd3a0b","source":{"userId":"Ufcc6524c6ffd8081bd133843484c63b7","type":"user"},"timestamp":1525499832964,"message":{"type":"text","id":"7906187669527","text":"將軍國小"}}]}
+image url: https://9d8af418.ngrok.io/image/%E6%BE%8E%E6%B9%96/%E5%B0%87%E8%BB%8D%E5%9C%8B%E5%B0%8F/event
+將軍國小
+將軍國小
+Request body: {"events":[{"type":"message","replyToken":"99221376602e47deb52d819976a8922d","source":{"userId":"Ufcc6524c6ffd8081bd133843484c63b7","type":"user"},"timestamp":1525514813893,"message":{"type":"text","id":"7907207459547","text":"將軍國小"}}]}
+image url: https://9d8af418.ngrok.io/image/%E6%BE%8E%E6%B9%96/%E5%B0%87%E8%BB%8D%E5%9C%8B%E5%B0%8F/event
+Request body: {"events":[{"type":"message","replyToken":"ef2a42cb7e87483abd6b3ad08331a756","source":{"userId":"Ufcc6524c6ffd8081bd133843484c63b7","type":"user"},"timestamp":1525514835430,"message":{"type":"text","id":"7907209016516","text":"大家好"}}]}
+Request body: {"events":[{"type":"message","replyToken":"ee222f06ff31456bab67112a168afcd8","source":{"userId":"Ufcc6524c6ffd8081bd133843484c63b7","type":"user"},"timestamp":1525514860815,"message":{"type":"text","id":"7907210865102","text":"我要查詢漏水小區"}}]}
+info
+Request body: {"events":[{"type":"message","replyToken":"c86ebfd0d2f7486ea8afdbe371238076","source":{"userId":"Ufcc6524c6ffd8081bd133843484c63b7","type":"user"},"timestamp":1525514898681,"message":{"type":"text","id":"7907213632180","text":"澎湖"}}]}
+Request body: {"events":[{"type":"message","replyToken":"2a5e4fb98fa84b42a11854a66dd3bb84","source":{"userId":"Ufcc6524c6ffd8081bd133843484c63b7","type":"user"},"timestamp":1525514908833,"message":{"type":"text","id":"7907214374006","text":"內垵小區配水表"}}]}
+image url: https://9d8af418.ngrok.io/image/%E6%BE%8E%E6%B9%96/%E5%85%A7%E5%9E%B5%E5%B0%8F%E5%8D%80%E9%85%8D%E6%B0%B4%E8%A1%A8/event
+Request body: {"events":[{"type":"message","replyToken":"5aaba5f8516e44488dc2bd2f0ca0fcdd","source":{"userId":"Ufcc6524c6ffd8081bd133843484c63b7","type":"user"},"timestamp":1525514942918,"message":{"type":"text","id":"7907216863224","text":"內垵小區配水表"}}]}
+image url: https://9d8af418.ngrok.io/image/%E6%BE%8E%E6%B9%96/%E5%85%A7%E5%9E%B5%E5%B0%8F%E5%8D%80%E9%85%8D%E6%B0%B4%E8%A1%A8/event
+內垵小區配水表
+Request body: {"events":[{"type":"message","replyToken":"41ff02283b464e098f0a8fc8c7809356","source":{"userId":"Ufcc6524c6ffd8081bd133843484c63b7","type":"user"},"timestamp":1525515087027,"message":{"type":"text","id":"7907227337592","text":"澎湖"}}]}
+Request body: {"events":[{"type":"message","replyToken":"a7b4936e3e3c4293a3a5a153af0387ee","source":{"userId":"Ufcc6524c6ffd8081bd133843484c63b7","type":"user"},"timestamp":1525515096581,"message":{"type":"text","id":"7907228015920","text":"內垵小區配水表"}}]}
+image url: http://c9fc3cb4.ngrok.io/image/%E6%BE%8E%E6%B9%96/%E5%85%A7%E5%9E%B5%E5%B0%8F%E5%8D%80%E9%85%8D%E6%B0%B4%E8%A1%A8/event
+Request body: {"events":[{"type":"message","replyToken":"ef3ecb0969fd48948dcd629131b97e86","source":{"userId":"Ufcc6524c6ffd8081bd133843484c63b7","type":"user"},"timestamp":1525515154680,"message":{"type":"text","id":"7907232230126","text":"澎湖"}}]}
+Request body: {"events":[{"type":"message","replyToken":"43913cf0657742d0a29f13a966641458","source":{"userId":"Ufcc6524c6ffd8081bd133843484c63b7","type":"user"},"timestamp":1525515159018,"message":{"type":"text","id":"7907232547572","text":"內垵小區配水表"}}]}
+image url: https://c9fc3cb4.ngrok.io/image/%E6%BE%8E%E6%B9%96/%E5%85%A7%E5%9E%B5%E5%B0%8F%E5%8D%80%E9%85%8D%E6%B0%B4%E8%A1%A8/event
+內垵小區配水表
+Request body: {"events":[{"type":"message","replyToken":"a558e3cea639478481679118dae9e190","source":{"userId":"Ufcc6524c6ffd8081bd133843484c63b7","type":"user"},"timestamp":1525516283081,"message":{"type":"text","id":"7907314582743","text":"我要查詢漏水區域"}}]}
+info
+Request body: {"events":[{"type":"message","replyToken":"a895882cbea64ddf90a67b3b3bc38f5c","source":{"userId":"Ufcc6524c6ffd8081bd133843484c63b7","type":"user"},"timestamp":1525516292913,"message":{"type":"text","id":"7907315301027","text":"澎湖"}}]}
+Request body: {"events":[{"type":"message","replyToken":"d566b5410d154e40b3fd887721e19fdd","source":{"userId":"Ufcc6524c6ffd8081bd133843484c63b7","type":"user"},"timestamp":1525516310772,"message":{"type":"text","id":"7907316620660","text":"望安消防局"}}]}
+Request body: {"events":[{"type":"message","replyToken":"9470e8b8097041818b6c2162acff7f8f","source":{"userId":"Ufcc6524c6ffd8081bd133843484c63b7","type":"user"},"timestamp":1525516321777,"message":{"type":"text","id":"7907317435489","text":"map"}}]}
+image url: https://c9fc3cb4.ngrok.io/image/%E6%BE%8E%E6%B9%96/%E6%9C%9B%E5%AE%89%E6%B6%88%E9%98%B2%E5%B1%80/map
+望安消防局
