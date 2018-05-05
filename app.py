@@ -96,6 +96,7 @@ def handle_message(event):
                 actions=[
                     MessageTemplateAction(
                         label='漏水小區狀態查詢',
+                        text='查詢漏水區域'
                     )
                 ]
             )
