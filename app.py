@@ -145,7 +145,8 @@ def handle_message(event):
     else:
         entity_list = wit_ai.retrive_message_entity(event.message.text)
         if 'region' in entity_list:
-            region_list = os.listdir('data')
+            # region_list = os.listdir('data')
+            region_list = ['澎湖']
             region_str = '[' + ','.join(region_list) + ']'
             response = '總計有' + region_str + '共' + str(len(region_list)) + '個小區\n' + \
                        '請說要查詢的漏水小區名稱'
