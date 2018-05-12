@@ -49,3 +49,7 @@ Request body: {"events":[{"type":"message","replyToken":"d566b5410d154e40b3fd887
 Request body: {"events":[{"type":"message","replyToken":"9470e8b8097041818b6c2162acff7f8f","source":{"userId":"Ufcc6524c6ffd8081bd133843484c63b7","type":"user"},"timestamp":1525516321777,"message":{"type":"text","id":"7907317435489","text":"map"}}]}
 image url: https://c9fc3cb4.ngrok.io/image/%E6%BE%8E%E6%B9%96/%E6%9C%9B%E5%AE%89%E6%B6%88%E9%98%B2%E5%B1%80/map
 望安消防局
+fake_location
+fake_location
+fake_location
+fake_location

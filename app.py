@@ -34,28 +34,31 @@ lock = threading.Lock()
 region = ''
 location = ''
 
-@app.route("/notify", methods=['POST'])
+@app.route("/notify", methods=['GET'])
 def notify():
     try:
-        json_dict = request.get_json()
-        email_message = json_dict['message']
-    # email_message = '小區名稱:延平小區 商校街 100mm\n' + \
-    #     '事件名稱:壓力低於歷史量\n' + \
-    #     '事件日期2018-02-06~2018-02-08\n' + \
-    #     '事件日期2018-02-07~2018-02-08\n' + \
-    #     '事件日期2018-02-07~2018-02-09\n' + \
-    #     '事件日期2018-02-08~2018-02-09\n' + \
-    #     '事件日期2018-02-08~2018-02-10\n' + \
-    #     '事件日期2018-02-09~2018-02-10\n' + \
-    #     '事件日期2018-02-09~2018-02-11\n' + \
-    #     '事件持續天數:2\n' + \
-    #     '允許雜質比(%):5\n' + \
-    #     '誤差比率(%):20\n' + \
-    #     '事件數目:72\n' + \
-    #     '預估漏水量:-36.11\n'
+        # json_dict = request.get_json()
+        # email_message = json_dict['message']
+        email_message = '小區名稱:南安國中監測站壓力計壓力' + \
+            '事件名稱:壓力低於歷史量' + \
+            '事件日期2018-02-28~2018-02-28' + \
+            '事件日期2018-03-01~2018-03-01' + \
+            '事件日期2018-03-01~2018-03-02' + \
+            '事件日期2018-03-02~2018-03-02' + \
+            '事件持續天數:1' + \
+            '允許雜質比(%):40' + \
+            '誤差比率(%):30'
         line_bot_api.push_message(
             user_id,
             TextSendMessage(text=email_message)
+        )
+        image_url = config['server']['url'] + '/image/fake_notify/fake_location/event'
+        line_bot_api.push_message(
+            user_id,
+            ImageSendMessage(
+                original_content_url=image_url,
+                preview_image_url=image_url
+            )
         )
     except LineBotApiError:
         abort(400)
